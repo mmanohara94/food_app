@@ -9,7 +9,7 @@ public class MainActivity extends AppCompatActivity {
 
      String[] food ={"Veg Grill Sandwich", "Paneer Cheese Sandwich", "Veg Cheese Sandwich",
              "Veg Mayo Sandwich", "Corn Cheese Sandwich", "Corn Spinach Sandwich","Paneer Corn Sandwich",
-             "Omelette", "Veg Maggi", "Egg Maggi","Watermelon Juice","Lemon Juice"};
+             "Omelette", "Veg Maggi", "Egg Maggi","Watermelon Juice","Lemon Juice", "Kiwi Juice"};
      
     @Override
     protected void onCreate(Bundle savedInstanceState) {
