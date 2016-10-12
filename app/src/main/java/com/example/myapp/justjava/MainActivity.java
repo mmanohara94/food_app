@@ -1,5 +1,6 @@
 package com.example.myapp.justjava;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -30,6 +31,11 @@ public class MainActivity extends AppCompatActivity {
 
                 String foods = (String)adapterView.getItemAtPosition(i);
                  Toast.makeText(view.getContext(),""+foods+ " is available", Toast.LENGTH_SHORT).show();
+
+                if(i == 0){
+                    Intent v = new Intent(view.getContext(), second.class);
+                    startActivity(v);
+                }
             }
         });
 
