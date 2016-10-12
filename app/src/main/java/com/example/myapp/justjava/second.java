@@ -12,8 +12,11 @@ public class second extends AppCompatActivity {
     private Button _decrease;
     private Button _increase;
     private TextView _value;
+    private TextView _total;
     private static int _counter = 0;
     private String _stringVal;
+    private String _stringVal2;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +26,7 @@ public class second extends AppCompatActivity {
         _decrease = (Button) findViewById(R.id.decrease);
         _increase = (Button) findViewById(R.id.increase);
         _value = (TextView) findViewById(R.id.quantity_text_view);
+        _total = (TextView) findViewById(R.id.price_text_view);
 
         _decrease.setOnClickListener(new OnClickListener() {
 
@@ -30,13 +34,15 @@ public class second extends AppCompatActivity {
             public void onClick(View v) {
 
                 Log.d("src", "Decreasing value...");
-                if (_counter>0)
-                _counter--;
+                if (_counter > 0)
+                    _counter--;
+                _stringVal2 = Integer.toString(25* _counter);
                 _stringVal = Integer.toString(_counter);
                 _value.setText(_stringVal);
-    }
+                _total.setText(_stringVal2);
+            }
 
- });
+        });
         _increase.setOnClickListener(new OnClickListener() {
 
             @Override
@@ -44,10 +50,16 @@ public class second extends AppCompatActivity {
 
                 Log.d("src", "Increasing value...");
                 _counter++;
+                _stringVal2 = Integer.toString(25* _counter);
                 _stringVal = Integer.toString(_counter);
                 _value.setText(_stringVal);
+                _total.setText(_stringVal2);
             }
         });
 
-    }
+
+
+
+
+}
 }
